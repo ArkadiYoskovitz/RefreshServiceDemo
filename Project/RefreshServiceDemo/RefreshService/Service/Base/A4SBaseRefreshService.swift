@@ -1,5 +1,5 @@
 //
-//  A4SRefreshService.swift
+//  A4SBaseRefreshService.swift
 //  RefreshServiceDemo
 //
 //  Created by Arkadi Yoskovitz on 5/4/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class A4SRefreshService
+open class A4SBaseRefreshService
 {
     // MARK: - Types
     private enum StorageKeys : String , CustomStringConvertible {

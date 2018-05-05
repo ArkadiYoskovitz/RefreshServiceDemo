@@ -8,7 +8,7 @@
 
 import UIKit
 
-class A4SBlockRefreshService : A4SRefreshService
+class A4SBlockRefreshService : A4SBaseRefreshService
 {
     // MARK: - Typealias
     public typealias EventHandler = @convention(block) () -> Swift.Void

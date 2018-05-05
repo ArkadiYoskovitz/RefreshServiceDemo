@@ -14,7 +14,7 @@
 		5D5D7D70209CB66C00C7A10C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5D7D6E209CB66C00C7A10C /* LaunchScreen.storyboard */; };
 		5D5D7D7B209CB66C00C7A10C /* RefreshServiceDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D7D7A209CB66C00C7A10C /* RefreshServiceDemoTests.swift */; };
 		5D5D7D86209CB66C00C7A10C /* RefreshServiceDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D7D85209CB66C00C7A10C /* RefreshServiceDemoUITests.swift */; };
-		5D5D7D96209CB6B400C7A10C /* A4SRefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D7D95209CB6B400C7A10C /* A4SRefreshService.swift */; };
+		5D5D7D96209CB6B400C7A10C /* A4SBaseRefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D7D95209CB6B400C7A10C /* A4SBaseRefreshService.swift */; };
 		5D5D7D98209CB6CA00C7A10C /* A4SDispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D7D97209CB6CA00C7A10C /* A4SDispatchTimer.swift */; };
 		5D5D7D9A209CB77B00C7A10C /* A4SBackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D7D99209CB77B00C7A10C /* A4SBackgroundTask.swift */; };
 		5D5D7D9C209CB79500C7A10C /* A4SApplicationBackgroundTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D7D9B209CB79500C7A10C /* A4SApplicationBackgroundTaskProtocol.swift */; };
@@ -52,7 +52,7 @@
 		5D5D7D81209CB66C00C7A10C /* RefreshServiceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefreshServiceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5D7D85209CB66C00C7A10C /* RefreshServiceDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshServiceDemoUITests.swift; sourceTree = "<group>"; };
 		5D5D7D87209CB66C00C7A10C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D5D7D95209CB6B400C7A10C /* A4SRefreshService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4SRefreshService.swift; sourceTree = "<group>"; };
+		5D5D7D95209CB6B400C7A10C /* A4SBaseRefreshService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4SBaseRefreshService.swift; sourceTree = "<group>"; };
 		5D5D7D97209CB6CA00C7A10C /* A4SDispatchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4SDispatchTimer.swift; sourceTree = "<group>"; };
 		5D5D7D99209CB77B00C7A10C /* A4SBackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4SBackgroundTask.swift; sourceTree = "<group>"; };
 		5D5D7D9B209CB79500C7A10C /* A4SApplicationBackgroundTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4SApplicationBackgroundTaskProtocol.swift; sourceTree = "<group>"; };
@@ -109,7 +109,6 @@
 			children = (
 				5D5D7D65209CB66B00C7A10C /* AppDelegate.swift */,
 				5D5D7D67209CB66B00C7A10C /* ViewController.swift */,
-				5D5D7D94209CB69900C7A10C /* InternalElements */,
 				5D5D7D93209CB68C00C7A10C /* RefreshService */,
 				5D5D7D69209CB66B00C7A10C /* Main.storyboard */,
 				5D5D7D6C209CB66C00C7A10C /* Assets.xcassets */,
@@ -140,8 +139,8 @@
 		5D5D7D93209CB68C00C7A10C /* RefreshService */ = {
 			isa = PBXGroup;
 			children = (
-				5D5D7D9D209CBA9800C7A10C /* A4SBlockRefreshService.swift */,
-				5D5D7D95209CB6B400C7A10C /* A4SRefreshService.swift */,
+				5D5D7D94209CB69900C7A10C /* InternalElements */,
+				5DBE7D2F209DAB5600F9B2A2 /* Service */,
 			);
 			path = RefreshService;
 			sourceTree = "<group>";
@@ -154,6 +153,31 @@
 				5D5D7D97209CB6CA00C7A10C /* A4SDispatchTimer.swift */,
 			);
 			path = InternalElements;
+			sourceTree = "<group>";
+		};
+		5DBE7D2D209DA7A900F9B2A2 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				5D5D7D9D209CBA9800C7A10C /* A4SBlockRefreshService.swift */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		5DBE7D2E209DA7C300F9B2A2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5D5D7D95209CB6B400C7A10C /* A4SBaseRefreshService.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5DBE7D2F209DAB5600F9B2A2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5DBE7D2E209DA7C300F9B2A2 /* Base */,
+				5DBE7D2D209DA7A900F9B2A2 /* Block */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +315,7 @@
 				5D5D7D66209CB66B00C7A10C /* AppDelegate.swift in Sources */,
 				5D5D7D98209CB6CA00C7A10C /* A4SDispatchTimer.swift in Sources */,
 				5D5D7D9E209CBA9800C7A10C /* A4SBlockRefreshService.swift in Sources */,
-				5D5D7D96209CB6B400C7A10C /* A4SRefreshService.swift in Sources */,
+				5D5D7D96209CB6B400C7A10C /* A4SBaseRefreshService.swift in Sources */,
 				5D5D7D9C209CB79500C7A10C /* A4SApplicationBackgroundTaskProtocol.swift in Sources */,
 				5D5D7D9A209CB77B00C7A10C /* A4SBackgroundTask.swift in Sources */,
 			);
